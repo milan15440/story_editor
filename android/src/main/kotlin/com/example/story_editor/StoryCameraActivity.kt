@@ -1,11 +1,12 @@
 package com.example.story_editor
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import io.flutter.embedding.android.FlutterActivity
 
-class StoryCameraActivity : FlutterActivity() {
+
+class StoryCameraActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_story_camera_activity)
@@ -15,7 +16,7 @@ class StoryCameraActivity : FlutterActivity() {
         buttonGiveMeBack.setOnClickListener {
             val intent = Intent()
             intent.putExtra("Result", "Coming from story camera")
-            activity.setResult(
+            setResult(
                 1000, intent
             )
             finish()
