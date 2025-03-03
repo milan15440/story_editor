@@ -14,7 +14,7 @@ class StoryCameraActivity : FlutterActivity() {
 
         buttonGiveMeBack.setOnClickListener {
             val intent = Intent()
-            intent.putExtra("Result", "Coming from story camera")
+            intent.putExtra("Result", "Hello This result is coming from story_editor")
             activity.setResult(
                 1000, intent
             )
