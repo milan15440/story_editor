@@ -38,7 +38,7 @@ class MainActivity : FlutterActivity() {
         methodChannel =
             MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL) // Initialize here
         methodChannel?.setMethodCallHandler { call, result ->
-           /* if (call.method == "openStoryEditor") {
+            if (call.method == "openStoryEditor") {
                 val intent = Intent(this, StoryCameraActivity::class.java)
                 startActivityForResult(intent, 1000)
 
@@ -46,7 +46,7 @@ class MainActivity : FlutterActivity() {
                 pendingResults[1000] = result
             } else {
                 result.notImplemented()
-            }*/
+            }
         }
     }
 
